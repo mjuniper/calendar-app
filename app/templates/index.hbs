@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h1>Calendar Sandbox</h1>
+        <p>This is demo of a couple of ways to handle a calendar.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>ember-power-calendar</h2>
+      <p>A well designed ember addon.</p>
+      <h3>pros</h3>
+      <ul>
+        <li>Handles all calendar related issues (dst, i18n, timezones, leap year <em>i think</em>)</li>
+        <li>Fairly flexible - I was able to change the rendering to use CSS grid but it was not trivial</li>
+      </ul>
+      <h3>cons</h3>
+      <ul>
+        <li>Does not render using CSS grid out of the box</li>
+        <li>Cell size must be specified so there is no obvious way to say "fill available space"</li>
+        <li>There does not seem to be an easy way to identify which grid cells have events (I'm sure we could do it but don't know what it would take)</li>
+      </ul>
+      <p>
+        {{#link-to 'power-calendar' class="btn btn-default"}}
+          View Details &raquo;
+        {{/link-to}}
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h2>my-calendar</h2>
+      <p>Custom calendar component.</p>
+      <h3>pros</h3>
+      <ul>
+        <li>Simple</li>
+        <li>We control it</li>
+        <li>Layout uses css grid</li>
+      </ul>
+      <h3>cons</h3>
+      <ul>
+        <li>We will need to make sure to handle everything (dst, i18n, timezones, leap year)</li>
+      </ul>
+      <p>
+        {{#link-to 'my-calendar-component' class="btn btn-default"}}
+          View Details &raquo;
+        {{/link-to}}
+      </p>
+   </div>
+  </div>
+</div>

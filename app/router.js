@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('power-calendar');
+  this.route('my-calendar-component');
 });
 
 export default Router;

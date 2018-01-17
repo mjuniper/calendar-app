@@ -1,0 +1,65 @@
+.ember-power-calendar {
+  nav {
+    display: flex;
+    align-items: center;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    justify-content: center;
+    min-height: 5vh;
+    text-align: center;
+  }
+
+  ol {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+  ul.weekdays {
+    margin-bottom: 1em;
+  }
+
+  ul.weekdays li {
+    height: 4vw;
+  }
+
+  ol.day-grid li {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    height: 12vw;
+    max-height: 125px;
+  }
+
+  ol.day-grid li.is-other-month {
+    color: lightgray
+  }
+
+  ol.day-grid li.is-today {
+    background-color: lightgray
+  }
+
+  @media all and (max-width: 800px) {
+    ul {
+      grid-gap: .25em;
+    }
+    ul.weekdays li {
+      font-size: 0;
+    }
+
+    ul.weekdays > li abbr:after {
+        content: attr(title);
+        font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+      text-align: center;
+      }
+  }
+}

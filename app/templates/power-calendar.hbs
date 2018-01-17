@@ -1,10 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      {{#power-calendar daysComponent="calendar-days" navComponent="calendar-nav" as |calendar|}}
+      {{#power-calendar-multiple selected=eventDates daysComponent="calendar-days" navComponent="calendar-nav" as |calendar|}}
         {{calendar.nav}}
         {{calendar.days}}
-      {{/power-calendar}}
+      {{/power-calendar-multiple}}
     </div>
   </div>
 </div>
+
+{{!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{power-calendar selected=eventDates class="power-calendar-default"}}
+    </div>
+  </div>
+</div>--}}

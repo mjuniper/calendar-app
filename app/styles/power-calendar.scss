@@ -48,6 +48,10 @@
     background-color: lightgray
   }
 
+  ol.day-grid li.is-selected {
+    background-color: fuchsia;
+  }
+
   @media all and (max-width: 800px) {
     ul {
       grid-gap: .25em;

@@ -4,12 +4,14 @@ export default Ember.Component.extend({
 
   tagName: 'li',
 
-  classNameBindings: [ 'isToday', 'isOtherMonth' ],
+  classNameBindings: [ 'isToday', 'isOtherMonth', 'isSelected' ],
 
   isToday: Ember.computed.reads('day.isToday'),
 
   isCurrentMonth: Ember.computed.reads('day.isCurrentMonth'),
 
-  isOtherMonth: Ember.computed.not('isCurrentMonth')
+  isOtherMonth: Ember.computed.not('isCurrentMonth'),
+
+  isSelected: Ember.computed.reads('day.isSelected')
 
 });

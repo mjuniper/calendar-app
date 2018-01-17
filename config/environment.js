@@ -44,7 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = '/your-repo-name';
+    ENV.locationType = 'hash';
   }
 
   return ENV;

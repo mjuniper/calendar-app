@@ -1,0 +1,28 @@
+ol.day-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  padding: 0;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    height: 12vw;
+    max-height: 125px;
+  }
+
+  li.is-last-month,
+  li.is-next-month {
+    color: lightgray
+  }
+
+  li.is-today {
+    background-color: lightgray
+  }
+}

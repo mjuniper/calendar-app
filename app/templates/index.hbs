@@ -14,13 +14,13 @@
       <h3>pros</h3>
       <ul>
         <li>Handles all calendar related issues (dst, i18n, timezones, leap year <em>i think</em>)</li>
-        <li>Fairly flexible - I was able to change the rendering to use CSS grid but it was not trivial and it is not production ready</li>
+        <li>Fairly flexible - I was able to change the rendering to use CSS grid but it was not trivial and these changes are not production ready</li>
       </ul>
       <h3>cons</h3>
       <ul>
         <li>Does not render using CSS grid out of the box</li>
-        <li>Cell size must be specified so there is no obvious way to say "fill available space"</li>
-        <li>There does not seem to be an easy way to identify which grid cells have events (I'm sure we could do it but don't know what it would take)</li>
+        <li>Cell size must be specified so there is no obvious way to say "fill available space" (overriding the rendering to use CSS grid mitigates this)</li>
+        <li>There does not seem to be an easy way to identify which grid cells have events (my custom component addresses this too but it is not yet production ready)</li>
       </ul>
       <p>
         {{#link-to 'power-calendar' class="btn btn-default"}}

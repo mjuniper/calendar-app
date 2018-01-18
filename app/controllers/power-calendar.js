@@ -12,8 +12,8 @@ export default Controller.extend({
 
   init() {
     this._super(...arguments);
-    this.set('centerDate', new Date(2017, 1, 7));
-    this.set('eventDates', [ new Date(2017, 1, 7), new Date(2017, 1, 9) ]);
+    this.set('centerDate', new Date(2018, 1, 7));
+    this.set('eventDates', [ new Date(2018, 1, 7), new Date(2018, 1, 9) ]);
   },
 
   actions: {

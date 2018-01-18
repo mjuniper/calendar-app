@@ -4,7 +4,7 @@ export default Ember.Component.extend({
 
   tagName: 'li',
 
-  classNameBindings: [ 'isToday', 'isOtherMonth', 'isSelected' ],
+  classNameBindings: [ 'isToday', 'isOtherMonth', 'hasEvent' ],
 
   isToday: Ember.computed.reads('day.isToday'),
 
@@ -12,6 +12,22 @@ export default Ember.Component.extend({
 
   isOtherMonth: Ember.computed.not('isCurrentMonth'),
 
-  isSelected: Ember.computed.reads('day.isSelected')
+  // isSelected: Ember.computed.reads('day.isSelected'),
+
+  hasEvent: Ember.computed('events', 'day', function () {
+    let result = false;
+    const events = this.get('events');
+    const dayMoment = this.get('day.moment');
+    if (events) {
+      result = events.some(selectedDate => {
+        return dayMoment.isSame(selectedDate, 'day');
+      });
+    }
+    return result;
+  }),
+
+  click() {
+    Ember.tryInvoke(this.attrs, 'onSelect');
+  }
 
 });

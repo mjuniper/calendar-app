@@ -25,11 +25,11 @@
     font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
   }
 
-  ul.weekdays {
-    margin-bottom: 1em;
+  ol.weekdays {
+    // margin-bottom: 1em;
   }
 
-  ul.weekdays li {
+  ol.weekdays li {
     height: 4vw;
   }
 
@@ -38,6 +38,10 @@
     border: 1px solid #eaeaea;
     height: 12vw;
     max-height: 125px;
+    cursor: pointer;
+    &:hover {
+      background-color: #F5F7FA;
+    }
   }
 
   ol.day-grid li.is-other-month {
@@ -48,8 +52,9 @@
     background-color: lightgray
   }
 
-  ol.day-grid li.is-selected {
-    background-color: fuchsia;
+  ol.day-grid li.has-event {
+    border-color: fuchsia;
+    border-width: 2px;
   }
 
   @media all and (max-width: 800px) {

@@ -16,7 +16,7 @@
 <ol class="day-grid" onkeydown={{action "onKeyDown" calendar}}>
   {{#each weeks key='id' as |week|}}
     {{#each week.days key='id' as |day|}}
-      {{calendar-day day=day}}
+      {{calendar-day day=day events=events onSelect=(action calendar.actions.select day calendar)}}
     {{/each}}
   {{/each}}
 </ol>
